@@ -163,7 +163,6 @@ useEffect(() => {
                 textShadow: "1px 1px 1px #000",
               }}
             >
-              <h3 className="h1 text-dark">{playingTrack?.title}</h3>
               {lyrics}
             </div>
           ) : null}
