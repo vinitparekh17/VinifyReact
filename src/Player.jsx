@@ -16,7 +16,7 @@ export default function Player({ accessToken, trackUri }) {
         color: "#000957",
         loaderColor: "#000957",
         sliderColor: "#00FFDD",
-        trackArtistColor: "#00095755",
+        trackArtistColor: "#000",
         trackNameColor: "#000957",
       }}
       showSaveIcon
