@@ -156,6 +156,7 @@ useEffect(() => {
               className="text-center"
               style={{
                 color: "#fff",
+                width: "100%",
                 fontSize: "1rem",
                 fontWeight: "600",
                 whiteSpace: "pre",
