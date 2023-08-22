@@ -9,7 +9,7 @@ export default function Player({ accessToken, trackUri }) {
   if (!accessToken) return null
   return (
     <SpotifyPlayer
-      token={accessToken}
+    token={accessToken}
       styles={{
         activeColor: "#000957",
         bgColor: "#ffffff90",

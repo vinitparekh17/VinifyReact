@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react"
+import Head from "next/head"
 import useAuth from "./useAuth"
 import Player from "./Player"
 import TrackSearchResult from "./TrackSearchResult"
 import "bootstrap/dist/css/bootstrap.min.css";
-import SpotifyPic from './vinify.png';
 import SpotifyWebApi from "spotify-web-api-node"
 import axios from "axios"
 
@@ -28,7 +28,7 @@ useEffect(() => {
   if (!playingTrack) return;
 
   axios
-    .get("https://championmod.herokuapp.com/lyrics", {
+    .get("http://localhost:3001/lyrics", {
       params: {
         track: playingTrack.title,
         artist: playingTrack.artist,
@@ -102,6 +102,13 @@ useEffect(() => {
 
   return (
     <>
+    <Head>
+      <title>Vinify | Non Stop Music</title>
+      <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      <meta name="description" content="Vinify, A Spotify Clone that gives premium experience." />
+      <meta name="keywords" content="Vinify, Non Stop Music" />
+      <link rel="icon" href="/vinify.png" />
+    </Head>
       <div className="d-flex flex-column m-0 aqua" style={{ height: "100vh" }}>
         <section>
           <nav
@@ -111,7 +118,7 @@ useEffect(() => {
             <div className="container-fluid">
               <a className="navbar-brand">
                 <img
-                  src={SpotifyPic}
+                  src={'/vinify.png'}
                   alt=""
                   width="27"
                   height="27"

@@ -8,7 +8,7 @@ export default function useAuth(code) {
 
   useEffect(() => {
     axios
-      .post("https://championmod.herokuapp.com/login", {
+      .post("http://localhost:3001/login", {
         code,
       })
       .then(res => {
